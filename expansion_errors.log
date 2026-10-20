@@ -1,0 +1,33 @@
+[2026-10-13 19:32:22] word='of' attempt=1: Item 2 must start with 'f'; got 'Used'
+Raw response: {"word":"of","expansion":["Often","Used"]}
+
+[2026-10-13 19:32:25] word='of' attempt=2: Item 1 must start with 'o'; got 'From'
+Raw response: {"word":"of","expansion":["From","Much"]}
+
+[2026-10-13 19:32:29] word='of' attempt=3: Item 1 must start with 'o'; got 'From'
+Raw response: {"word":"of","expansion":["From","Much"]}
+
+[2026-10-13 19:32:32] word='of' attempt=4: Item 1 must start with 'o'; got 'From'
+Raw response: {"word":"of","expansion":["From","Much"]}
+
+[2026-10-13 19:33:02] word='of' attempt=1: Item 2 must start with 'f'; got 'Used'
+Raw response: {"word":"of","expansion":["Often","Used"]}
+
+[2026-10-13 19:33:05] word='of' attempt=2: Item 1 must start with 'o'; got 'From'
+Raw response: {"word":"of","expansion":["From","Much"]}
+
+[2026-10-13 19:33:08] word='of' attempt=3: Item 1 must start with 'o'; got 'From'
+Raw response: {"word":"of","expansion":["From","Much"]}
+
+[2026-10-13 19:33:11] word='of' attempt=4: Item 1 must start with 'o'; got 'From'
+Raw response: {"word":"of","expansion":["From","Much"]}
+
+[2026-10-13 19:33:14] word='and' attempt=1: Item 1 must start with 'a'; got 'joining'
+Raw response: {"word":"and","expansion":["joining","words","together"]}
+
+[2026-10-13 19:33:17] word='and' attempt=2: Expected 3 expansion words, got 2
+Raw response: {"word":"and","expansion":["add","more"]}
+
+[2026-10-13 19:33:30] word='in' attempt=1: Expected 2 expansion words, got 3
+Raw response: {"word":"in","expansion":["inside","near","within"]}
+
