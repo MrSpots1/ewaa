@@ -754,7 +754,29 @@ def create_app():
                 404,
             )
 
-        return jsonify(serialize_word(row))
+        data = serialize_word(row)
+        parts = sorted(set(data["expansion"]))
+        expansions = {}
+
+        if parts:
+            placeholders = ", ".join("?" for _ in parts)
+            rows = get_db().execute(
+                f"""
+                SELECT word, expansion
+                FROM words
+                WHERE word IN ({placeholders})
+                """,
+                parts,
+            ).fetchall()
+
+            expansions = {
+                part_row["word"]: json.loads(part_row["expansion"])
+                for part_row in rows
+            }
+
+        data["expansions"] = expansions
+
+        return jsonify(data)
 
     @app.get("/api/random")
     def random_word():

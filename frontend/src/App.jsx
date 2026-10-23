@@ -745,8 +745,20 @@ function WordContent({ word }) {
                     <span className="letter-tile" aria-hidden="true">
                       {word[index].toUpperCase()}
                     </span>
-                    <span className="acronym-part">
-                      {titleCase(part)}
+                    <span className="acronym-text">
+                      <span className="acronym-part">
+                        {titleCase(part)}
+                      </span>
+                      {state.data.expansions[part] && (
+                        <span className="acronym-sub">
+                          {state.data.expansions[part].map((sub, subIndex) => (
+                            <span key={`${subIndex}-${sub}`}>
+                              {subIndex > 0 && " "}
+                              {titleCase(sub)}
+                            </span>
+                          ))}
+                        </span>
+                      )}
                     </span>
                     <span className="acronym-index" aria-hidden="true">
                       {String(index + 1).padStart(2, "0")}
