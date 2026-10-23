@@ -438,7 +438,7 @@ function HomePage() {
           <h2>Playful definitions. Not perfect synonyms.</h2>
           <p>
             These are creatively constructed acronyms, sometimes called
-            backronyms—not the historical origins of the words. The
+            backronyms. They are not the historical origins of the words. The
             dictionary is growing, and your reports help improve it.
           </p>
         </div>
