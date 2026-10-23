@@ -365,12 +365,12 @@ function HomePage() {
             <span className="mini-tag">Example</span>
           </div>
 
-          <Link className="example-word" to="/word/cat/">
-            CAT <Arrow diagonal />
+          <Link className="example-word" to="/word/yum/">
+            YUM <Arrow diagonal />
           </Link>
 
           <div className="example-parts">
-            {["cuddly", "agile", "tomcat"].map((part) => (
+            {["yields", "ultimate", "mouthpleasure"].map((part) => (
               <Link
                 key={part}
                 className="example-part"
