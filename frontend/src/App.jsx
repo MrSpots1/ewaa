@@ -714,9 +714,16 @@ function WordContent({ word }) {
 
             <h1>{state.data.word.toUpperCase()}</h1>
 
-            <p className="phrase">
-              {state.data.expansion.map(titleCase).join(" ")}
-            </p>
+           <p className="phrase">
+            {state.data.expansion.map((part, index) => (
+              <React.Fragment key={`${index}-${part}`}>
+                {index > 0 && " "}
+                <Link to={wordPath(part)} className="phrase-word">
+                  {titleCase(part)}
+                </Link>
+              </React.Fragment>
+            ))}
+          </p>
           </header>
 
           <section
