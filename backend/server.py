@@ -84,6 +84,14 @@ DATABASE_PATH = Path(
     os.environ.get("EWAA_DB_PATH", str(BASE_DIR / "ewaa.sqlite3"))
 ).expanduser().resolve()
 
+BAD_WORDS_PATH = BASE_DIR.parent / "bad_words.txt"
+
+BAD_WORDS = frozenset(
+    line.strip().lower()
+    for line in BAD_WORDS_PATH.read_text(encoding="utf-8").splitlines()
+    if line.strip()
+)
+
 HOST = "127.0.0.1"
 PORT = 7863
 
@@ -772,6 +780,7 @@ def create_app():
             expansions = {
                 part_row["word"]: json.loads(part_row["expansion"])
                 for part_row in rows
+                if part_row["word"] not in BAD_WORDS
             }
 
         data["expansions"] = expansions
